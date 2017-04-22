@@ -15,9 +15,13 @@ use Models\Model\AbstractModel;
  * --------- items: array, contains the section items
  * ------------- -
  * ----------------- label: string, the label of the item
- * ----------------- link: string, a string used to generate the uri of the link
  * ----------------- icon: string|null, a string representing the item icon, or null if there is no icon
  * ----------------- items: array|null, an array of children items, or null if there is no children
+ * ----------------- ?link: string, a string used to generate the uri of the link
+ * ----------------- ?badge: array representing a badge to put next to the label
+ * --------------------- type: string(error|warning|info|success), the badge type
+ * --------------------- text: string, the text of the badge
+ *
  *
  *
  *
