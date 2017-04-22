@@ -61,6 +61,7 @@ Models
 ===========
 
 - Notification: represent a list of notifications
+- AdminSidebarMenuModel: represent an admin sidebar menu
 
 
 
@@ -73,6 +74,10 @@ Related
 
 History Log
 ------------------
+    
+- 1.1.0 -- 2017-04-22
+
+    - add AdminSidebarMenuModel
     
 - 1.0.0 -- 2017-04-18
 
