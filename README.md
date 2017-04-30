@@ -60,6 +60,7 @@ Or just download it and place it where you want otherwise.
 Models
 ===========
 
+- DataTable: represent a datatable widget
 - Notification: represent a list of notifications
 - AdminSidebarMenuModel: represent an admin sidebar menu
 
@@ -74,6 +75,10 @@ Related
 
 History Log
 ------------------
+    
+- 1.2.0 -- 2017-04-30
+
+    - add DataTable
     
 - 1.1.0 -- 2017-04-22
 
