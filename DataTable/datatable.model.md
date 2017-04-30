@@ -22,8 +22,7 @@ DataTable model
                             - link
                             - links
                 
-                The rest of the array entries depend on the type.
-                Those remaining entries are described below in this document.
+                - data: depend on the type, see the "Rows special features" section below.
                 
 - ric: array of row identifying columns (generally just contain the id column for dataTables which render data from a database)
                 
@@ -50,8 +49,11 @@ DataTable model
 - showNipp: bool=true, whether or not to show the nbItemPerPage selector
 - nippItems: array of possible nipp values, default=\[5, 10, 20, 50, 100, all]
                 The special value all means all.
+                The special value label can be set with the textNippAll key.
+                
 - showQuickPage: bool=true, whether or not to display a quick page navigation widget
 - showPagination: bool=true, whether or not to display the pagination widget
+- showBulkActions: bool=true, whether or not to display bulk actions
 - bulkActions: array of identifier => bulkActions, each entry containing the following:
     - confirm: bool=false, whether or not to confirm before executing the action
     - confirmText: string=null, the confirm text. If null, will default to 
@@ -66,10 +68,52 @@ DataTable model
                         The returned response must be a standardJsonResponse (see below).
             - refreshOnSuccess: like modal, but displays the modal only in case of failure,
                         and otherwise (in case of success), it refreshes the datatable (and widgets).
+            - quietOnSuccess: like modal, but displays the modal only in case of failure,
+                        and otherwise (in case of success), does nothing
+                              
+            
+- showActionButtons: bool=true, whether or not to display the action buttons
+- actionButtons: array of identifier => actionButton, each entry containing the following:
+                same as bulkActions, with one more entry:
+                    - icon: string, an icon suggestion identifier
+                
+                
+
             
 - textNoResult: string, the text to display when the number of rows is zero.
                 Default: No results found
-- textSearch: string, the text to display in the search button
+- textSearch: string, the text to display in the search button.
+                Default: Search
+- textCountInfo: string, the format string representing the count info.
+                    A typical count info string looks like this:
+                    Showing 1 to 10 of 57 entries
+                    And so we use tags to achieve displaying the unknown info.
+                    Default: Showing {offsetStart} to {offsetEnd} of {nbItems} entries
+                    
+                    The variables have to be resolved by the renderer object.
+                    
+                    
+                    Have a look at the DataTableRendererUtil::getShowCountInfoText($a)
+                    method to see an example of how the computation is done.
+                    (ModelRenderers\DataTable\Util\DataTableRendererUtil).
+- textNipp: string, the format string representing the nipp selector.
+            Default: Show {select} entries
+            
+                        The {select} tag is replaced by an html select tag,
+                        and this is done by the renderer object.
+- textNippAll: string, default=all,
+                    the label of the "all" special key potentially displayed in a nipp.  
+- textQuickPage: string, default=Page, text used by the quickPage widget
+- textQuickPageButton: string, default=Go, text used inside the button of the quickPage widget
+- textBulkActionsTeaser: string, default=For selected entries,  
+                            text typically displayed as the first option's label of the bulk action selector
+                    
+                    
+                    
+                    
+                    
+                    
+                    
             
             
             
@@ -115,7 +159,8 @@ The following properties describe a link:
 - confirm: bool=false, whether or not to confirm before executing the action
 - confirmText: string=null, the confirm text. If null, will default to 
                 a default text of: "Are you sure you want to execute this action?"
-- icon: string=null, if not null, provides an identifier representing the type of icon desired.
+- ?icon: string=null, if not null, provides an identifier representing the type of icon desired.
+- ?label: string=null, if not null, will display the given text as the label
                 
 
 

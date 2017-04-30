@@ -29,9 +29,18 @@ class DataTableModel implements ModelInterface
     protected $nippItems;
     protected $showQuickPage;
     protected $showPagination;
+    protected $showBulkActions;
     protected $bulkActions;
+    protected $showActionButtons;
+    protected $actionButtons;
     protected $textNoResult;
     protected $textSearch;
+    protected $textCountInfo;
+    protected $textNipp;
+    protected $textNippAll;
+    protected $textQuickPage;
+    protected $textQuickPageButton;
+    protected $textBulkActionsTeaser;
 
     public function __construct()
     {
@@ -55,9 +64,18 @@ class DataTableModel implements ModelInterface
         $this->nippItems = [5, 10, 20, 50, 100, 'all'];
         $this->showQuickPage = true;
         $this->showPagination = true;
+        $this->showBulkActions = true;
         $this->bulkActions = [];
+        $this->showActionButtons = true;
+        $this->actionButtons = [];
         $this->textNoResult = "No result found";
         $this->textSearch = "Search";
+        $this->textCountInfo = "Showing {offsetStart} to {offsetEnd} of {nbItems} entries";
+        $this->textNipp = "Show {select} entries";
+        $this->textNippAll = "all";
+        $this->textQuickPage = "Page";
+        $this->textQuickPageButton = "Go";
+        $this->textBulkActionsTeaser = "For selected entries";
     }
 
     public static function create()
@@ -88,9 +106,18 @@ class DataTableModel implements ModelInterface
             'nippItems' => $this->nippItems,
             'showQuickPage' => $this->showQuickPage,
             'showPagination' => $this->showPagination,
+            'showBulkActions' => $this->showBulkActions,
             'bulkActions' => $this->bulkActions,
+            'showActionButtons' => $this->showActionButtons,
+            'actionButtons' => $this->actionButtons,
             'textNoResult' => $this->textNoResult,
             'textSearch' => $this->textSearch,
+            'textCountInfo' => $this->textCountInfo,
+            'textNipp' => $this->textNipp,
+            'textNippAll' => $this->textNippAll,
+            'textQuickPage' => $this->textQuickPage,
+            'textQuickPageButton' => $this->textQuickPageButton,
+            'textBulkActionsTeaser' => $this->textBulkActionsTeaser,
         ];
     }
 
@@ -211,9 +238,27 @@ class DataTableModel implements ModelInterface
         return $this;
     }
 
+    public function setShowBulkActions($showBulkActions)
+    {
+        $this->showBulkActions = $showBulkActions;
+        return $this;
+    }
+
     public function setBulkActions(array $bulkActions)
     {
         $this->bulkActions = $bulkActions;
+        return $this;
+    }
+
+    public function setShowActionButtons($showActionButtons)
+    {
+        $this->showActionButtons = $showActionButtons;
+        return $this;
+    }
+
+    public function setActionButtons(array $actionButtons)
+    {
+        $this->actionButtons = $actionButtons;
         return $this;
     }
 
@@ -226,6 +271,42 @@ class DataTableModel implements ModelInterface
     public function setTextSearch($textSearch)
     {
         $this->textSearch = $textSearch;
+        return $this;
+    }
+
+    public function setTextCountInfo($textCountInfo)
+    {
+        $this->textCountInfo = $textCountInfo;
+        return $this;
+    }
+
+    public function setTextNipp($textNipp)
+    {
+        $this->textNipp = $textNipp;
+        return $this;
+    }
+
+    public function setTextNippAll($textNippAll)
+    {
+        $this->textNippAll = $textNippAll;
+        return $this;
+    }
+
+    public function setTextQuickPage($textQuickPage)
+    {
+        $this->textQuickPage = $textQuickPage;
+        return $this;
+    }
+
+    public function setTextQuickPageButton($textQuickPageButton)
+    {
+        $this->textQuickPageButton = $textQuickPageButton;
+        return $this;
+    }
+
+    public function setTextBulkActionsTeaser($textBulkActionsTeaser)
+    {
+        $this->textBulkActionsTeaser = $textBulkActionsTeaser;
         return $this;
     }
 

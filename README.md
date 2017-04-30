@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.3.0 -- 2017-04-30
+
+    - improved on DataTable
+    
 - 1.2.0 -- 2017-04-30
 
     - add DataTable
