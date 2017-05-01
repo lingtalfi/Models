@@ -58,9 +58,10 @@ DataTable model
     - confirm: bool=false, whether or not to confirm before executing the action
     - confirmText: string=null, the confirm text. If null, will default to 
                     a default text of: "Are you sure you want to execute this action?"
-    - label: string, the label of the bulk action
-    - uri: string, the uriNotation (see below) 
-    - type: string, the type amongst:
+    - label: string="", the label of the bulk action
+    - uri: string="/datatable-handler?type=bulk", the uriNotation (see below)
+                        The action identifier is passed via post.
+    - type: string=modal, the type amongst:
             - post: the data will be posted to the given uri as post data, this will refresh the page
             - modal: the data will be posted to the given uri as post data, but via ajax, and a modal
                         will be used to hold the server's response.
@@ -76,7 +77,8 @@ DataTable model
 - actionButtons: array of identifier => actionButton, each entry containing the following:
                 same as bulkActions, with one more entry:
                     - icon: string, an icon suggestion identifier
-                
+                Also, the default uri is:
+                - uri: string="/datatable-handler?type=action"
                 
 
             
