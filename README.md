@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.4.0 -- 2017-05-01
+
+    - add textSearchClear for DataTable model 
+    
 - 1.3.0 -- 2017-04-30
 
     - improved on DataTable

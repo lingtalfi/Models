@@ -86,6 +86,7 @@ DataTable model
                 Default: No results found
 - textSearch: string, the text to display in the search button.
                 Default: Search
+- textSearchClear: string, the text to display in the search clear button.
 - textCountInfo: string, the format string representing the count info.
                     A typical count info string looks like this:
                     Showing 1 to 10 of 57 entries

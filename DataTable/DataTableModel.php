@@ -35,6 +35,7 @@ class DataTableModel implements ModelInterface
     protected $actionButtons;
     protected $textNoResult;
     protected $textSearch;
+    protected $textSearchClear;
     protected $textCountInfo;
     protected $textNipp;
     protected $textNippAll;
@@ -70,6 +71,7 @@ class DataTableModel implements ModelInterface
         $this->actionButtons = [];
         $this->textNoResult = "No result found";
         $this->textSearch = "Search";
+        $this->textSearchClear = "Clear";
         $this->textCountInfo = "Showing {offsetStart} to {offsetEnd} of {nbItems} entries";
         $this->textNipp = "Show {select} entries";
         $this->textNippAll = "all";
@@ -112,6 +114,7 @@ class DataTableModel implements ModelInterface
             'actionButtons' => $this->actionButtons,
             'textNoResult' => $this->textNoResult,
             'textSearch' => $this->textSearch,
+            'textSearchClear' => $this->textSearchClear,
             'textCountInfo' => $this->textCountInfo,
             'textNipp' => $this->textNipp,
             'textNippAll' => $this->textNippAll,
@@ -271,6 +274,11 @@ class DataTableModel implements ModelInterface
     public function setTextSearch($textSearch)
     {
         $this->textSearch = $textSearch;
+        return $this;
+    }
+    public function setTextSearchClear($textSearchClear)
+    {
+        $this->textSearchClear = $textSearchClear;
         return $this;
     }
 
