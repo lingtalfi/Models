@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.4.1 -- 2017-05-02
+
+    - add textEmptyBulkWarning and showEmptyBulkWarning for DataTable model
+    
 - 1.4.0 -- 2017-05-01
 
     - add textSearchClear for DataTable model 

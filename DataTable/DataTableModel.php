@@ -30,6 +30,7 @@ class DataTableModel implements ModelInterface
     protected $showQuickPage;
     protected $showPagination;
     protected $showBulkActions;
+    protected $showEmptyBulkWarning;
     protected $bulkActions;
     protected $showActionButtons;
     protected $actionButtons;
@@ -42,6 +43,7 @@ class DataTableModel implements ModelInterface
     protected $textQuickPage;
     protected $textQuickPageButton;
     protected $textBulkActionsTeaser;
+    protected $textEmptyBulkWarning;
 
     public function __construct()
     {
@@ -66,6 +68,7 @@ class DataTableModel implements ModelInterface
         $this->showQuickPage = true;
         $this->showPagination = true;
         $this->showBulkActions = true;
+        $this->showEmptyBulkWarning = true;
         $this->bulkActions = [];
         $this->showActionButtons = true;
         $this->actionButtons = [];
@@ -78,6 +81,7 @@ class DataTableModel implements ModelInterface
         $this->textQuickPage = "Page";
         $this->textQuickPageButton = "Go";
         $this->textBulkActionsTeaser = "For selected entries";
+        $this->textEmptyBulkWarning = "Please select at least one row";
     }
 
     public static function create()
@@ -109,6 +113,7 @@ class DataTableModel implements ModelInterface
             'showQuickPage' => $this->showQuickPage,
             'showPagination' => $this->showPagination,
             'showBulkActions' => $this->showBulkActions,
+            'showEmptyBulkWarning' => $this->showEmptyBulkWarning,
             'bulkActions' => $this->bulkActions,
             'showActionButtons' => $this->showActionButtons,
             'actionButtons' => $this->actionButtons,
@@ -121,6 +126,7 @@ class DataTableModel implements ModelInterface
             'textQuickPage' => $this->textQuickPage,
             'textQuickPageButton' => $this->textQuickPageButton,
             'textBulkActionsTeaser' => $this->textBulkActionsTeaser,
+            'textEmptyBulkWarning' => $this->textEmptyBulkWarning,
         ];
     }
 
@@ -247,6 +253,13 @@ class DataTableModel implements ModelInterface
         return $this;
     }
 
+    public function setShowEmptyBulkWarning($showEmptyBulkWarning)
+    {
+        $this->showEmptyBulkWarning = $showEmptyBulkWarning;
+        return $this;
+    }
+
+
     public function setBulkActions(array $bulkActions)
     {
         $this->bulkActions = $bulkActions;
@@ -276,6 +289,7 @@ class DataTableModel implements ModelInterface
         $this->textSearch = $textSearch;
         return $this;
     }
+
     public function setTextSearchClear($textSearchClear)
     {
         $this->textSearchClear = $textSearchClear;
@@ -317,5 +331,12 @@ class DataTableModel implements ModelInterface
         $this->textBulkActionsTeaser = $textBulkActionsTeaser;
         return $this;
     }
+
+    public function setTextEmptyBulkWarning($textEmptyBulkWarning)
+    {
+        $this->textEmptyBulkWarning = $textEmptyBulkWarning;
+        return $this;
+    }
+
 
 }

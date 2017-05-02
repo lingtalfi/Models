@@ -54,6 +54,8 @@ DataTable model
 - showQuickPage: bool=true, whether or not to display a quick page navigation widget
 - showPagination: bool=true, whether or not to display the pagination widget
 - showBulkActions: bool=true, whether or not to display bulk actions
+- showEmptyBulkWarning: bool=true, whether or not to display bulk a warning message when the user tries
+                            to execute a bulk action but has not selected any rows
 - bulkActions: array of identifier => bulkActions, each entry containing the following:
     - confirm: bool=false, whether or not to confirm before executing the action
     - confirmText: string=null, the confirm text. If null, will default to 
@@ -110,6 +112,7 @@ DataTable model
 - textQuickPageButton: string, default=Go, text used inside the button of the quickPage widget
 - textBulkActionsTeaser: string, default=For selected entries,  
                             text typically displayed as the first option's label of the bulk action selector
+- textEmptyBulkWarning: string, default=Please select at least one row  
                     
                     
                     
