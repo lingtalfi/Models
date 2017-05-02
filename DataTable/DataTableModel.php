@@ -44,6 +44,7 @@ class DataTableModel implements ModelInterface
     protected $textQuickPageButton;
     protected $textBulkActionsTeaser;
     protected $textEmptyBulkWarning;
+    protected $textUseSelectedRowsEmptyWarning;
 
     public function __construct()
     {
@@ -82,6 +83,7 @@ class DataTableModel implements ModelInterface
         $this->textQuickPageButton = "Go";
         $this->textBulkActionsTeaser = "For selected entries";
         $this->textEmptyBulkWarning = "Please select at least one row";
+        $this->textUseSelectedRowsEmptyWarning = "Please select at least one row";
     }
 
     public static function create()
@@ -127,6 +129,7 @@ class DataTableModel implements ModelInterface
             'textQuickPageButton' => $this->textQuickPageButton,
             'textBulkActionsTeaser' => $this->textBulkActionsTeaser,
             'textEmptyBulkWarning' => $this->textEmptyBulkWarning,
+            'textUseSelectedRowsEmptyWarning' => $this->textUseSelectedRowsEmptyWarning,
         ];
     }
 
@@ -335,6 +338,12 @@ class DataTableModel implements ModelInterface
     public function setTextEmptyBulkWarning($textEmptyBulkWarning)
     {
         $this->textEmptyBulkWarning = $textEmptyBulkWarning;
+        return $this;
+    }
+
+    public function setTextUseSelectedRowsEmptyWarning($textUseSelectedRowsEmptyWarning)
+    {
+        $this->textUseSelectedRowsEmptyWarning = $textUseSelectedRowsEmptyWarning;
         return $this;
     }
 

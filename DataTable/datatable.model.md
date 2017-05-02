@@ -62,7 +62,8 @@ DataTable model
                     a default text of: "Are you sure you want to execute this action?"
     - label: string="", the label of the bulk action
     - uri: string="/datatable-handler?type=bulk", the uriNotation (see below)
-                        The action identifier is passed via post.
+                        The action identifier is passed via post (with key id).
+                        Also, the selected rows' rics are passed as an array via post (with key rics)
     - type: string=modal, the type amongst:
             - post: the data will be posted to the given uri as post data, this will refresh the page
             - modal: the data will be posted to the given uri as post data, but via ajax, and a modal
@@ -77,8 +78,12 @@ DataTable model
             
 - showActionButtons: bool=true, whether or not to display the action buttons
 - actionButtons: array of identifier => actionButton, each entry containing the following:
-                same as bulkActions, with one more entry:
-                    - icon: string, an icon suggestion identifier
+                same as bulkActions, with the following extra entries:
+                    - icon: string, an icon suggestion identifier    
+                    - useSelectedRows: bool, whether or not to use the selected rows for this action.
+                                        If true and no rows is selected, a warning will be displayed with the message
+                                        defined in the textUseSelectedRowsEmptyWarning key.
+                                        Note that the rics are passed no matter what.
                 Also, the default uri is:
                 - uri: string="/datatable-handler?type=action"
                 
@@ -113,6 +118,7 @@ DataTable model
 - textBulkActionsTeaser: string, default=For selected entries,  
                             text typically displayed as the first option's label of the bulk action selector
 - textEmptyBulkWarning: string, default=Please select at least one row  
+- textUseSelectedRowsEmptyWarning: string, default=Please select at least one row  
                     
                     
                     

@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.4.2 -- 2017-05-02
+
+    - add textUseSelectedRowsEmptyWarning and action\[useSelectedRows] for DataTable model
+    
 - 1.4.1 -- 2017-05-02
 
     - add textEmptyBulkWarning and showEmptyBulkWarning for DataTable model
