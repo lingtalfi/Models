@@ -160,21 +160,10 @@ This will create a link.
 The following properties describe a link:
 
 
-- type: string, defines the type of link displayed:
-    - link: a regular link, which points to any page, a page refresh is involved
-    - modal: an ajax link, which return is displayed in a modal.
-            Json must be used as the datatype for this type of exchange.
-            The returned response must be a standardJsonResponse (see above).
-    - refreshOnSuccess: like modal, but displays the modal only in case of failure,
-                        and otherwise (in case of success), it refreshes the datatable (and widgets).
-- uri: string, the uriNotation for the link.
-            The ric value of the row is provided via $_POST\[ric].
-- confirm: bool=false, whether or not to confirm before executing the action
-- confirmText: string=null, the confirm text. If null, will default to 
-                a default text of: "Are you sure you want to execute this action?"
-- ?icon: string=null, if not null, provides an identifier representing the type of icon desired.
-- ?label: string=null, if not null, will display the given text as the label
-                
+Same as bulkActions, with the following extra entries:
+    - icon: string, an icon suggestion identifier
+    
+Also, the ric value of the row is provided via $_POST\[ric].
 
 
 links
