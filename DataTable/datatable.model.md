@@ -80,7 +80,7 @@ DataTable model
 - actionButtons: array of identifier => actionButton, each entry containing the following:
                 same as bulkActions, with the following extra entries:
                     - icon: string, an icon suggestion identifier    
-                    - useSelectedRows: bool, whether or not to use the selected rows for this action.
+                    - useSelectedRows: bool=false, whether or not to use the selected rows for this action.
                                         If true and no rows is selected, a warning will be displayed with the message
                                         defined in the textUseSelectedRowsEmptyWarning key.
                                         Note that the rics are passed no matter what.
