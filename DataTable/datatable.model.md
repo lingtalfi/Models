@@ -186,6 +186,15 @@ Shall be displayed as a grouped buttons widgets or something alike.
 
 
 
+Others
+----------
+This model is open to new ideas.
+For instance, a boostrap renderer might provide a dropdown special feature.
+
+Renderer implementor should expose their capabilities upfront in their doc. 
+
+
+
 
 
 Renderer constraints
