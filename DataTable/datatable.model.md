@@ -119,6 +119,8 @@ DataTable model
                             text typically displayed as the first option's label of the bulk action selector
 - textEmptyBulkWarning: string, default=Please select at least one row  
 - textUseSelectedRowsEmptyWarning: string, default=Please select at least one row  
+- textPaginationPrev: string, default=Previous, the text to display in the pagination's prev button (if any)  
+- textPaginationNext: string, default=Next, the text to display in the pagination's next button (if any)  
                     
                     
                     

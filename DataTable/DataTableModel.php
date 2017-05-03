@@ -45,6 +45,8 @@ class DataTableModel implements ModelInterface
     protected $textBulkActionsTeaser;
     protected $textEmptyBulkWarning;
     protected $textUseSelectedRowsEmptyWarning;
+    protected $textPaginationPrev;
+    protected $textPaginationNext;
 
     public function __construct()
     {
@@ -84,6 +86,8 @@ class DataTableModel implements ModelInterface
         $this->textBulkActionsTeaser = "For selected entries";
         $this->textEmptyBulkWarning = "Please select at least one row";
         $this->textUseSelectedRowsEmptyWarning = "Please select at least one row";
+        $this->textPaginationPrev = "Prev";
+        $this->textPaginationNext = "Next";
     }
 
     public static function create()
@@ -130,6 +134,8 @@ class DataTableModel implements ModelInterface
             'textBulkActionsTeaser' => $this->textBulkActionsTeaser,
             'textEmptyBulkWarning' => $this->textEmptyBulkWarning,
             'textUseSelectedRowsEmptyWarning' => $this->textUseSelectedRowsEmptyWarning,
+            'textPaginationPrev' => $this->textPaginationPrev,
+            'textPaginationNext' => $this->textPaginationNext,
         ];
     }
 
@@ -344,6 +350,18 @@ class DataTableModel implements ModelInterface
     public function setTextUseSelectedRowsEmptyWarning($textUseSelectedRowsEmptyWarning)
     {
         $this->textUseSelectedRowsEmptyWarning = $textUseSelectedRowsEmptyWarning;
+        return $this;
+    }
+
+    public function setTextPaginationPrev($textPaginationPrev)
+    {
+        $this->textPaginationPrev = $textPaginationPrev;
+        return $this;
+    }
+
+    public function setTextPaginationNext($textPaginationNext)
+    {
+        $this->textPaginationNext = $textPaginationNext;
         return $this;
     }
 

@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.4.3 -- 2017-05-03
+
+    - add textPaginationPrev and textPaginationNext methods
+    
 - 1.4.2 -- 2017-05-02
 
     - add textUseSelectedRowsEmptyWarning and action\[useSelectedRows] for DataTable model
