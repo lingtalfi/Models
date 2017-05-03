@@ -126,6 +126,8 @@ class DataTableModel implements ModelInterface
             'nippItems' => $this->nippItems,
             'showQuickPage' => $this->showQuickPage,
             'showPagination' => $this->showPagination,
+            'paginationNavigators' => $this->paginationNavigators,
+            'paginationLength' => $this->paginationLength,
             'showBulkActions' => $this->showBulkActions,
             'showEmptyBulkWarning' => $this->showEmptyBulkWarning,
             'bulkActions' => $this->bulkActions,
@@ -142,8 +144,10 @@ class DataTableModel implements ModelInterface
             'textBulkActionsTeaser' => $this->textBulkActionsTeaser,
             'textEmptyBulkWarning' => $this->textEmptyBulkWarning,
             'textUseSelectedRowsEmptyWarning' => $this->textUseSelectedRowsEmptyWarning,
+            'textPaginationFirst' => $this->textPaginationFirst,
             'textPaginationPrev' => $this->textPaginationPrev,
             'textPaginationNext' => $this->textPaginationNext,
+            'textPaginationLast' => $this->textPaginationLast,
         ];
     }
 
