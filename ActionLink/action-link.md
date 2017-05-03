@@ -16,9 +16,10 @@ Renderer implementors should document new features that they add.
 - ?confirmText: string=null, the confirm text. If null, will default to 
                 a default text of: "Are you sure you want to execute this action?"
 - ?label: string="", the label of the action link
-- ?id: the identifier of the action link. It is used only to be passed as the uri {id} tag.
-- ?uri: string="/actionlink-handler?id={id}", The {id} tag will be replaced with the value of the id property, or 0 if the id property is not set
+- ?id: the identifier of the action link. If set, will be passed via POST, as the id key. 
+- ?uri: string="/actionlink-handler"
 - ?type: string=modal, the type amongst:
+        - post: the data will be posted to the given uri as post data, this will refresh the page
         - flat: simply redirects to the given uri, as would a regular html link do
         - modal: the uri will be called via ajax, and a modal
                     will be used to hold the server's response.
