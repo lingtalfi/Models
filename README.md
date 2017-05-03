@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.5.1 -- 2017-05-03
+
+    - add flavour to DataTable model
+    
 - 1.5.0 -- 2017-05-03
 
     - add paginationNavigators and paginationLength

@@ -87,6 +87,7 @@ DataTable model
 - actionButtons: array of identifier => actionButton, each entry containing the following:
                 same as bulkActions, with the following extra entries:
                     - icon: string, an icon suggestion identifier    
+                    - flavour: string, a color/type suggestion    
                     - useSelectedRows: bool=false, whether or not to use the selected rows for this action.
                                         If true and no rows is selected, a warning will be displayed with the message
                                         defined in the textUseSelectedRowsEmptyWarning key.
@@ -173,6 +174,7 @@ The following properties describe a link:
 
 Same as bulkActions, with the following extra entries:
     - icon: string, an icon suggestion identifier
+    - flavour: string, a color/type suggestion
     
 Also, the ric value of the row is provided via $_POST\[ric].
 
