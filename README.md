@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.6.0 -- 2017-05-03
+
+    - add dropDown and actionLink models
+    
 - 1.5.1 -- 2017-05-03
 
     - add flavour to DataTable model
