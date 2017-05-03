@@ -53,6 +53,13 @@ DataTable model
                 
 - showQuickPage: bool=true, whether or not to display a quick page navigation widget
 - showPagination: bool=true, whether or not to display the pagination widget
+- paginationNavigators: array=\[first, prev, next, last], array containing the navigator elements to display, amongst:
+            - first
+            - prev
+            - next
+            - last
+- paginationLength: int=9, the max number of pagination items to display.
+                            The current page should be display in the middle
 - showBulkActions: bool=true, whether or not to display bulk actions
 - showEmptyBulkWarning: bool=true, whether or not to display bulk a warning message when the user tries
                             to execute a bulk action but has not selected any rows
@@ -119,8 +126,10 @@ DataTable model
                             text typically displayed as the first option's label of the bulk action selector
 - textEmptyBulkWarning: string, default=Please select at least one row  
 - textUseSelectedRowsEmptyWarning: string, default=Please select at least one row  
+- textPaginationFirst: string, default=First, the text to display in the pagination's first button (if any)  
 - textPaginationPrev: string, default=Previous, the text to display in the pagination's prev button (if any)  
 - textPaginationNext: string, default=Next, the text to display in the pagination's next button (if any)  
+- textPaginationLast: string, default=Last, the text to display in the pagination's last button (if any)  
                     
                     
                     

@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.5.0 -- 2017-05-03
+
+    - add paginationNavigators and paginationLength
+    
 - 1.4.3 -- 2017-05-03
 
     - add textPaginationPrev and textPaginationNext methods

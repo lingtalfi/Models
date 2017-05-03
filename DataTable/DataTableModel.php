@@ -29,6 +29,8 @@ class DataTableModel implements ModelInterface
     protected $nippItems;
     protected $showQuickPage;
     protected $showPagination;
+    protected $paginationNavigators;
+    protected $paginationLength;
     protected $showBulkActions;
     protected $showEmptyBulkWarning;
     protected $bulkActions;
@@ -45,8 +47,10 @@ class DataTableModel implements ModelInterface
     protected $textBulkActionsTeaser;
     protected $textEmptyBulkWarning;
     protected $textUseSelectedRowsEmptyWarning;
+    protected $textPaginationFirst;
     protected $textPaginationPrev;
     protected $textPaginationNext;
+    protected $textPaginationLast;
 
     public function __construct()
     {
@@ -70,6 +74,8 @@ class DataTableModel implements ModelInterface
         $this->nippItems = [5, 10, 20, 50, 100, 'all'];
         $this->showQuickPage = true;
         $this->showPagination = true;
+        $this->paginationNavigators = ['first', 'prev', 'next', 'last'];
+        $this->paginationLength = 9;
         $this->showBulkActions = true;
         $this->showEmptyBulkWarning = true;
         $this->bulkActions = [];
@@ -86,8 +92,10 @@ class DataTableModel implements ModelInterface
         $this->textBulkActionsTeaser = "For selected entries";
         $this->textEmptyBulkWarning = "Please select at least one row";
         $this->textUseSelectedRowsEmptyWarning = "Please select at least one row";
+        $this->textPaginationFirst = "First";
         $this->textPaginationPrev = "Prev";
         $this->textPaginationNext = "Next";
+        $this->textPaginationLast = "Last";
     }
 
     public static function create()
@@ -256,6 +264,19 @@ class DataTableModel implements ModelInterface
         return $this;
     }
 
+    public function setPaginationNavigators(array $paginationNavigators)
+    {
+        $this->paginationNavigators = $paginationNavigators;
+        return $this;
+    }
+
+    public function setPaginationLength($paginationLength)
+    {
+        $this->paginationLength = $paginationLength;
+        return $this;
+    }
+
+
     public function setShowBulkActions($showBulkActions)
     {
         $this->showBulkActions = $showBulkActions;
@@ -353,6 +374,12 @@ class DataTableModel implements ModelInterface
         return $this;
     }
 
+    public function setTextPaginationFirst($textPaginationFirst)
+    {
+        $this->textPaginationFirst = $textPaginationFirst;
+        return $this;
+    }
+
     public function setTextPaginationPrev($textPaginationPrev)
     {
         $this->textPaginationPrev = $textPaginationPrev;
@@ -365,5 +392,10 @@ class DataTableModel implements ModelInterface
         return $this;
     }
 
+    public function setTextPaginationLast($textPaginationLast)
+    {
+        $this->textPaginationLast = $textPaginationLast;
+        return $this;
+    }
 
 }
