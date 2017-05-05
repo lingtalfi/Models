@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.7.0 -- 2017-05-05
+
+    - renamed actionLink to actionItem
+    
 - 1.6.0 -- 2017-05-03
 
     - add dropDown and actionLink models

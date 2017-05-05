@@ -1,4 +1,4 @@
-ActionLink
+ActionItem
 ==============
 2017-05-03
 
@@ -31,6 +31,6 @@ Renderer implementors should document new features that they add.
                     
                     
                
-
+Depending on the type, the actionItem might have more/less properties.
 
 
