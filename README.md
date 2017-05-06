@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.8.0 -- 2017-05-06
+
+    - DataTable model: headers does now contain only columnIds 
+    
 - 1.7.0 -- 2017-05-05
 
     - renamed actionLink to actionItem

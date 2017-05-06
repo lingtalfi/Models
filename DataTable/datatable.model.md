@@ -5,9 +5,10 @@ DataTable model
 
 
 (view info)
-- headers: array of columnId => label
+- headers: array of columnId
                 This array is also determining the order in which columns are displayed.
                 It must contain all columns, including hidden ones.
+                
 - hidden: array of hidden columns.
                 Hidden means hidden from the view, but the data shall be still accessible if needed.
 - rows: array of row, each row containing the key => value data.
