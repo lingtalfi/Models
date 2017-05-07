@@ -73,6 +73,7 @@ DataTable model
                         The action identifier is passed via post (with key id).
                         Also, the selected rows' rics are passed as an array via post (with key rics)
     - type: string=modal, the type amongst:
+            - link: the browser will be redirected to the given uri, as if you had clicked on a link
             - post: the data will be posted to the given uri as post data, this will refresh the page
             - modal: the data will be posted to the given uri as post data, but via ajax, and a modal
                         will be used to hold the server's response.

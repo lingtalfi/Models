@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.9.0 -- 2017-05-07
+
+    - DataTable model: add link value for type 
+    
 - 1.8.0 -- 2017-05-06
 
     - DataTable model: headers does now contain only columnIds 
