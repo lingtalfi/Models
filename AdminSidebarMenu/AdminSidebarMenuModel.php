@@ -12,6 +12,7 @@ use Models\Model\AbstractModel;
  * - sections:
  * ----- -
  * --------- label: string, the label of the section
+ * --------- ?name: string, the name (identifier) of the section
  * --------- items: array, contains the section items
  * ------------- -
  * ----------------- label: string, the label of the item
@@ -21,6 +22,7 @@ use Models\Model\AbstractModel;
  * ----------------- ?badge: array representing a badge to put next to the label
  * --------------------- type: string(error|warning|info|success), the badge type
  * --------------------- text: string, the text of the badge
+ * ----------------- ?name: string, the name (identifier) of the item
  *
  *
  *

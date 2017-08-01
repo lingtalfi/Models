@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.10.0 -- 2017-08-01
+
+    - add AdminSidebarMenuModel optional name property
+
 - 1.9.0 -- 2017-05-07
 
     - DataTable model: add link value for type 
