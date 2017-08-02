@@ -185,6 +185,7 @@ class Item
             'link' => $this->link,
             'badge' => $badge,
             'items' => $items,
+            'active' => $this->isActive(),
         ];
     }
 

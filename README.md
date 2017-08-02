@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.12.1 -- 2017-08-02
+
+    - fix LeeAdminSidebarMenuModel getArray doesn't return active property
+    
 - 1.12.0 -- 2017-08-01
 
     - add AdminSidebarMenuModel optional active property

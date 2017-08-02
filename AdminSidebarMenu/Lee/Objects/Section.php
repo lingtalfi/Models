@@ -131,6 +131,7 @@ class Section
             'name' => $this->name,
             'label' => $this->label,
             'items' => $items,
+            'active' => $this->getActive(),
         ];
     }
 }
