@@ -14,6 +14,7 @@ use Models\Model\AbstractModel;
  * --------- label: string, the label of the section
  * --------- ?name: string, the name (identifier) of the section
  * --------- items: array, contains the section items
+ * --------- ?active: bool, whether or not this section contains an active item
  * ------------- -
  * ----------------- label: string, the label of the item
  * ----------------- icon: string|null, a string representing the item icon, or null if there is no icon
@@ -23,6 +24,7 @@ use Models\Model\AbstractModel;
  * --------------------- type: string(error|warning|info|success), the badge type
  * --------------------- text: string, the text of the badge
  * ----------------- ?name: string, the name (identifier) of the item
+ * ----------------- ?active: bool, whether or not this item is active (matches the url)
  *
  *
  *

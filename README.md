@@ -76,6 +76,11 @@ Related
 History Log
 ------------------
     
+- 1.12.0 -- 2017-08-01
+
+    - add AdminSidebarMenuModel optional active property
+    - LeeAdminSidebarMenuModel now understands active property 
+    
 - 1.11.0 -- 2017-08-01
 
     - add LeeAdminSidebarMenuModel
