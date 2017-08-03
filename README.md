@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.14.0 -- 2017-08-03
+
+    - add Pagination model
+    
 - 1.13.0 -- 2017-08-03
 
     - add ListSortBar model
