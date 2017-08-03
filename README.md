@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.13.0 -- 2017-08-03
+
+    - add ListSortBar model
+    
 - 1.12.1 -- 2017-08-02
 
     - fix LeeAdminSidebarMenuModel getArray doesn't return active property
