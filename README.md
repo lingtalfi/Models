@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.14.1 -- 2017-08-04
+
+    - fix LeeListSortBarModel bugs
+    
 - 1.14.0 -- 2017-08-03
 
     - add Pagination model

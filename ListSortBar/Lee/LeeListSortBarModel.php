@@ -51,23 +51,29 @@ class LeeListSortBarModel extends ListSortBarModel
     {
         $o = new self();
         $sortItems = [];
+
+        $val = null;
         if (array_key_exists($o->nameSortItems, $pool)) {
             $val = $pool[$o->nameSortItems];
-            foreach ($name2Label as $name => $label) {
-                $selected = ($name === $val);
-                $sortItems[] = [
-                    'value' => $name,
-                    'selected' => $selected,
-                    'label' => $label,
-                ];
-            }
         }
+        foreach ($name2Label as $name => $label) {
+            $selected = ($name === $val);
+            $sortItems[] = [
+                'value' => $name,
+                'selected' => $selected,
+                'label' => $label,
+            ];
+        }
+        $o->sortItems = $sortItems;
 
+
+        $val =null;
         if (array_key_exists($o->nameSortDir, $pool)) {
             $val = $pool[$o->nameSortDir];
-            $o->sortItems = $sortItems;
-            $o->selectedSortDirAsc = ($o->valueSortDirAsc === $val);
         }
+        $o->selectedSortDirAsc = ($o->valueSortDirAsc === $val);
+        $o->selectedSortDirDesc = ($o->valueSortDirDesc === $val);
+
         return $o;
     }
 
