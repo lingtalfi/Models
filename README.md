@@ -76,6 +76,10 @@ Related
 History Log
 ------------------
     
+- 1.15.0 -- 2017-08-26
+
+    - add Breadcrumbs model
+    
 - 1.14.1 -- 2017-08-04
 
     - fix LeeListSortBarModel bugs
