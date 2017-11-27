@@ -4,7 +4,7 @@ Form model
 
 
 A form model.
-Version 1.2.0
+Version 1.2.1
 
 
 
@@ -27,7 +27,7 @@ Overview
     - attributes: read only array containing the following:
                 - method
                 - action
-                - enctype
+                - ?enctype
                 - ?id
                 - ?class 
     - attributeString: the string version of the attributes array
