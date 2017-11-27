@@ -19,11 +19,11 @@ Overview
                 It might be used by the view to concatenate
                 for/id identifiers for instance.
                  
-    - method: 
-    - action: 
-    - enctype: 
-    - id: the css id 
-    - class: the css class 
+    - method: string
+    - action: string
+    - enctype: string
+    - id: string, the css id 
+    - class: string, the css class 
     - attributes: array containing the forementionned attributes, READONLY.
                     The renderer might use it to access particular values such as the css id for instance
                     (if it wants to implement some js behaviour for instance). 
