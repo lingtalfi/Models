@@ -53,6 +53,10 @@ Related
 History Log
 ------------------
     
+- 1.18.0 -- 2017-11-27
+
+    - update formModel -> 1.1.0
+    
 - 1.17.0 -- 2017-11-24
 
     - add formModel 1.0.0

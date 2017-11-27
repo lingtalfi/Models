@@ -4,7 +4,7 @@ Form model
 
 
 A form model.
-Version 1.0.0
+Version 1.1.0
 
 
 
@@ -22,9 +22,14 @@ Overview
     - method: 
     - action: 
     - enctype: 
-    - attributeString: 
+    - id: the css id 
+    - class: the css class 
+    - attributes: array containing the forementionned attributes, READONLY.
+                    The renderer might use it to access particular values such as the css id for instance
+                    (if it wants to implement some js behaviour for instance). 
+    - attributeString: READONLY
             it's recommended that you only display this attributeString, and forget about 
-            the method, action and enctype properties                  
+            the other attributes                  
     - notifications: array of notification.
                     Each notification is a notification model as defined here (https://github.com/lingtalfi/Models/blob/master/Notification/NotificationsModel.php).
                     Or see the "Add notification messages to the form" section below for more details.
