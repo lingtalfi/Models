@@ -53,6 +53,10 @@ Related
 History Log
 ------------------
     
+- 1.20.0 -- 2017-12-03
+
+    - add RepaymentSchedule model
+    
 - 1.19.1 -- 2017-11-27
 
     - update formModel -> 1.2.1
