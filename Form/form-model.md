@@ -4,7 +4,7 @@ Form model
 
 
 A form model.
-Version 1.2.1
+Version 1.3.0
 
 
 
@@ -48,6 +48,7 @@ Overview
         - value: the value of the control, it can be null, a string, or
                 an array (in case of multiple checkboxes for instance)
         - errors: an array of error messages bound to the control
+        - properties: an array of user defined properties if you need them
         - ...plus, potential other properties depending on the type and your needs
 ```
 
