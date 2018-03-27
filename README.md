@@ -53,6 +53,10 @@ Related
 History Log
 ------------------
     
+- 1.22.0 -- 2018-03-27
+
+    - add InfoTableModel
+    
 - 1.21.0 -- 2018-01-18
 
     - update formModel -> 1.3.0
