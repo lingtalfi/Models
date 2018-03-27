@@ -15,7 +15,12 @@ namespace Models\InfoTable;
  *
  * - headers: array of labels, if empty, means no headers
  * - rows: array of rows, each row is an array with the same structure.
+ * - ?colTransformers: array of colName => callback, transform the entry which
+ *          key is colName using the given callback.
+ *          The callback has the following signature:
  *
+ *
+ *              fn ( value, row ): string|null
  *
  *
  */
@@ -23,11 +28,13 @@ class InfoTableModel
 {
     protected $headers;
     protected $rows;
+    protected $colTransformers;
 
     public function __construct()
     {
         $this->headers = [];
         $this->rows = [];
+        $this->colTransformers = [];
     }
 
     public static function create()
@@ -43,7 +50,13 @@ class InfoTableModel
 
     public function rows(array $rows)
     {
-        $this->$rows = $rows;
+        $this->rows = $rows;
+        return $this;
+    }
+
+    public function colTransfomers(array $colTransformers)
+    {
+        $this->colTransformers = $colTransformers;
         return $this;
     }
 
@@ -66,11 +79,20 @@ class InfoTableModel
         return $this->rows;
     }
 
+    /**
+     * @return array
+     */
+    public function getColTransformers(): array
+    {
+        return $this->colTransformers;
+    }
+
     public function getModel()
     {
         return [
             'headers' => $this->headers,
             'rows' => $this->rows,
+            'colTransformers' => $this->colTransformers,
         ];
     }
 

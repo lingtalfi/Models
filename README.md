@@ -53,6 +53,10 @@ Related
 History Log
 ------------------
     
+- 1.23.0 -- 2018-03-27
+
+    - add InfoTableModel colTransfomers property to the model
+    
 - 1.22.0 -- 2018-03-27
 
     - add InfoTableModel
