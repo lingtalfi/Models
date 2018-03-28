@@ -15,12 +15,15 @@ namespace Models\InfoTable;
  *
  * - headers: array of labels, if empty, means no headers
  * - rows: array of rows, each row is an array with the same structure.
+ *              Note: the keys can be numeric or names, names are only required if you are using colTransformers
  * - ?colTransformers: array of colName => callback, transform the entry which
  *          key is colName using the given callback.
  *          The callback has the following signature:
  *
  *
  *              fn ( value, row ): string|null
+ *
+ *
  *
  *
  */
