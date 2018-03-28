@@ -15,13 +15,15 @@ namespace Models\InfoTable;
  *
  * - headers: array of labels, if empty, means no headers
  * - rows: array of rows, each row is an array with the same structure.
- *              Note: the keys can be numeric or names, names are only required if you are using colTransformers
+ *              Note: the keys can be numeric or names, names are only required if you are using colTransformers or hidden
+ *
  * - ?colTransformers: array of colName => callback, transform the entry which
  *          key is colName using the given callback.
  *          The callback has the following signature:
  *
  *
  *              fn ( value, row ): string|null
+ * - ?hidden: array of colName to not display (but they will be accessible via colTransformers)
  *
  *
  *
@@ -32,12 +34,14 @@ class InfoTableModel
     protected $headers;
     protected $rows;
     protected $colTransformers;
+    protected $hidden;
 
     public function __construct()
     {
         $this->headers = [];
         $this->rows = [];
         $this->colTransformers = [];
+        $this->hidden = [];
     }
 
     public static function create()
@@ -60,6 +64,12 @@ class InfoTableModel
     public function colTransfomers(array $colTransformers)
     {
         $this->colTransformers = $colTransformers;
+        return $this;
+    }
+
+    public function hidden(array $hidden)
+    {
+        $this->hidden = $hidden;
         return $this;
     }
 
@@ -90,12 +100,22 @@ class InfoTableModel
         return $this->colTransformers;
     }
 
+
+    /**
+     * @return array
+     */
+    public function getHidden(): array
+    {
+        return $this->hidden;
+    }
+
     public function getModel()
     {
         return [
             'headers' => $this->headers,
             'rows' => $this->rows,
             'colTransformers' => $this->colTransformers,
+            'hidden' => $this->hidden,
         ];
     }
 
