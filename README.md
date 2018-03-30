@@ -53,6 +53,10 @@ Related
 History Log
 ------------------
     
+- 1.25.0 -- 2018-03-30
+
+    - add SimpleDropDownModel model
+    
 - 1.24.0 -- 2018-03-28
 
     - add InfoTableModel hidden property to the model
