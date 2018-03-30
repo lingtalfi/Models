@@ -35,6 +35,7 @@ class SimpleDropDownModel extends AbstractModel
     public function __construct()
     {
         parent::__construct();
+        $this->label = "";
         $this->items = [];
     }
 
