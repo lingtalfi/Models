@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Models\Pagination;
+namespace Ling\Models\Pagination;
 
 
-use Models\Model\AbstractModel;
+use Ling\Models\Model\AbstractModel;
 
 
 /**

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Models\Model;
+namespace Ling\Models\Model;
 
 
 interface ModelInterface

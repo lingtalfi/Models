@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Models\InfoTable;
+namespace Ling\Models\InfoTable;
 
 
 /**

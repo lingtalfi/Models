@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Models\ListSortBar;
+namespace Ling\Models\ListSortBar;
 
 
-use Models\Model\AbstractModel;
+use Ling\Models\Model\AbstractModel;
 
 
 /**

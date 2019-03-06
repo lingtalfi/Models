@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Models\AdminSidebarMenu\Lee\Objects;
+namespace Ling\Models\AdminSidebarMenu\Lee\Objects;
 
 
 class Section

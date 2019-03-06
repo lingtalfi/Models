@@ -1,9 +1,9 @@
 <?php
 
-namespace Models\DataTable;
+namespace Ling\Models\DataTable;
 
 
-use Models\Model\ModelInterface;
+use Ling\Models\Model\ModelInterface;
 
 
 class DataTableModel implements ModelInterface

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Models\ListSortBar\Lee;
+namespace Ling\Models\ListSortBar\Lee;
 
 
-use Models\ListSortBar\ListSortBarModel;
+use Ling\Models\ListSortBar\ListSortBarModel;
 
 
 class LeeListSortBarModel extends ListSortBarModel

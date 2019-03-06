@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Models\AdminSidebarMenu\Exception;
+namespace Ling\Models\AdminSidebarMenu\Exception;
 
 
 class AdminSidebarMenuException extends \Exception

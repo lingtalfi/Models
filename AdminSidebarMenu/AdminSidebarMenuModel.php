@@ -1,9 +1,9 @@
 <?php
 
-namespace Models\AdminSidebarMenu;
+namespace Ling\Models\AdminSidebarMenu;
 
 
-use Models\Model\AbstractModel;
+use Ling\Models\Model\AbstractModel;
 
 
 /**

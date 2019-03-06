@@ -1,9 +1,9 @@
 <?php
 
-namespace Models\Notification;
+namespace Ling\Models\Notification;
 
 
-use Models\Model\AbstractModel;
+use Ling\Models\Model\AbstractModel;
 
 
 /**

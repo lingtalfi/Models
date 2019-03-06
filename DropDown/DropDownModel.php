@@ -1,9 +1,9 @@
 <?php
 
-namespace Models\DropDown;
+namespace Ling\Models\DropDown;
 
 
-use Models\Model\AbstractModel;
+use Ling\Models\Model\AbstractModel;
 
 
 /**

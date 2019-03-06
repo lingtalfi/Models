@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Models\Pagination\Lee;
+namespace Ling\Models\Pagination\Lee;
 
 
-use Bat\UriTool;
-use Models\Pagination\PaginationModel;
+use Ling\Bat\UriTool;
+use Ling\Models\Pagination\PaginationModel;
 
 
 /**

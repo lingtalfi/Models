@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Models\AdminSidebarMenu\Lee;
+namespace Ling\Models\AdminSidebarMenu\Lee;
 
 
-use Models\AdminSidebarMenu\AdminSidebarMenuModel;
-use Models\AdminSidebarMenu\Exception\AdminSidebarMenuException;
-use Models\AdminSidebarMenu\Lee\Objects\Section;
+use Ling\Models\AdminSidebarMenu\AdminSidebarMenuModel;
+use Ling\Models\AdminSidebarMenu\Exception\AdminSidebarMenuException;
+use Ling\Models\AdminSidebarMenu\Lee\Objects\Section;
 
 /**
  * Implementation recommended for small menus (10-30 items like the user account menu of an e-commerce
