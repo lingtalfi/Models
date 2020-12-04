@@ -53,6 +53,10 @@ Related
 History Log
 ------------------
 
+- 1.26.1 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.26.0 -- 2018-06-15
 
     - update formModel -> 1.4.0
